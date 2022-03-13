@@ -14,6 +14,7 @@ app.use(bodyParser.json())
 app.use('/api/', require('./routes/voluntario.route'))
 app.use('/api/', require('./routes/estudiante.route'))
 app.use('/api/', require('./routes/carrera.route'))
+app.use('/api/', require('./routes/horario.route'))
 //start server
 
 app.listen(app.get('Port'), () => {

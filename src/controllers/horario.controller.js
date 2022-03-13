@@ -1,13 +1,13 @@
 const Horario = require('../models/horario.model')
 const horarioController = {}
 
-//GET DE TODOS EXCEPTO SI ES STATUS INACTIVE
+//GET DE TODOS
 horarioController.getAll = async (req, res) => {
   try {
     const horario = await Horario.find({ status: 'active' })
     if (horario.length === 0) {
       res.status(404).json({
-        message: 'No se encontró ningún horario activo.',
+        message: 'No se encontró ningún horario.',
       })
       return
     }

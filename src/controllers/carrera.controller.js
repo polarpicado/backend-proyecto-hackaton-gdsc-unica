@@ -7,7 +7,7 @@ carreraController.getAll = async (req, res) => {
     const carrera = await Carrera.find({ status: 'active' })
     if (carrera.length === 0) {
       res.status(404).json({
-        message: 'No se encontró ninguna carrera activa.',
+        message: 'No se encontró ninguna carrera.',
       })
       return
     }

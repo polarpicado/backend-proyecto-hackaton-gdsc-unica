@@ -8,7 +8,7 @@ voluntarioController.getAll = async (req, res) => {
     const voluntario = await Voluntario.find({ status: 'active' })
     if (voluntario.length === 0) {
       res.status(404).json({
-        message: 'No se encontró ningún voluntario activo.',
+        message: 'No se encontró ningún voluntario.',
       })
       return
     }

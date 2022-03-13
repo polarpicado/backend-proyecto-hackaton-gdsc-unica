@@ -7,7 +7,7 @@ estudianteController.getAll = async (req, res) => {
     const estudiante = await Estudiante.find({ status: 'active' })
     if (estudiante.length === 0) {
       res.status(404).json({
-        message: 'No se encontró ningún estudiante activo.',
+        message: 'No se encontró ningún estudiante.',
       })
       return
     }
